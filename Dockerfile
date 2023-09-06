@@ -36,10 +36,10 @@ CMD ["google-chrome-stable" "--no-sandbox"]
 
 # cd to the downloaded instance
 RUN cd /pa11y-dashboard/node_modules/pa11y/node_modules/puppeteer/.local-chromium/linux-869685/chrome-linux/ \
-&& sudo chown root:root chrome_sandbox \
-&& sudo chmod 4755 chrome_sandbox \
+&& chown root:root chrome_sandbox \
+&& chmod 4755 chrome_sandbox \
 # copy sandbox executable to a shared location
-&& sudo cp -p chrome_sandbox /usr/local/sbin/chrome-devel-sandbox \
+&& cp -p chrome_sandbox /usr/local/sbin/chrome-devel-sandbox \
 # export CHROME_DEVEL_SANDBOX env variable
 && export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox 
 
