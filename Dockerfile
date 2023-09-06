@@ -32,9 +32,10 @@ RUN npm init -y &&  \
 
 # Run everything after as non-privileged user.
 USER pptruser
-CMD ["google-chrome-stable"]
+CMD ["google-chrome-stable" "--no-sandbox"]
 
 EXPOSE 4000
 EXPOSE 3000
 
+CMD ["mongod"]
 CMD ["node", "index.js"]
