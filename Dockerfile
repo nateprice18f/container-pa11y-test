@@ -30,4 +30,3 @@ EXPOSE 27017
 
 CMD systemctl enable mongod.service
 CMD ["mongod"]
-
