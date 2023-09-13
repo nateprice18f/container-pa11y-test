@@ -28,5 +28,4 @@ RUN apt-get update && \
 
 EXPOSE 27017
 
-CMD systemctl enable mongod.service
-CMD ["mongod"]
+ENTRYPOINT ["mongod"]
