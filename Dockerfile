@@ -30,19 +30,19 @@ RUN npm init -y &&  \
     && chown -R pptruser:pptruser /pa11y-dashboard/package-lock.json \
     && chown -R pptruser:pptruser /data/db \
     # cd to the downloaded instance
-    && cd /pa11y-dashboard/node_modules/pa11y/node_modules/puppeteer/.local-chromium/linux-869685/chrome-linux/ \
-    && chown root:root chrome_sandbox \
-    && chmod 4755 chrome_sandbox \
+    #&& cd /pa11y-dashboard/node_modules/pa11y/node_modules/puppeteer/.local-chromium/linux-869685/chrome-linux/ \
+    #&& chown root:root chrome_sandbox \
+    #&& chmod 4755 chrome_sandbox \
     # copy sandbox executable to a shared location
-    && cp -p chrome_sandbox /usr/local/sbin/chrome-devel-sandbox \
+    #&& cp -p chrome_sandbox /usr/local/sbin/chrome-devel-sandbox \
     # export CHROME_DEVEL_SANDBOX env variable
-    && export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox 
+    #&& export CHROME_DEVEL_SANDBOX=/usr/local/sbin/chrome-devel-sandbox 
     
 # Run everything after as non-privileged user.
 USER pptruser
-CMD ["google-chrome-stable"]
+#CMD ["google-chrome-stable"]
 
 EXPOSE 4000
 EXPOSE 3000
-CMD ["mongod"]
+#CMD ["mongod"]
 CMD ["node", "index.js"]
