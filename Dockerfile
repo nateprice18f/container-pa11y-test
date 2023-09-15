@@ -28,7 +28,7 @@ RUN npm init -y &&  \
     && chown -R pptruser:pptruser /pa11y-dashboard/node_modules \
     && chown -R pptruser:pptruser /pa11y-dashboard/package.json \
     && chown -R pptruser:pptruser /pa11y-dashboard/package-lock.json \
-    && chown -R pptruser:pptruser /data/db \
+    && chown -R pptruser:pptruser /data/db 
     # cd to the downloaded instance
     #&& cd /pa11y-dashboard/node_modules/pa11y/node_modules/puppeteer/.local-chromium/linux-869685/chrome-linux/ \
     #&& chown root:root chrome_sandbox \
