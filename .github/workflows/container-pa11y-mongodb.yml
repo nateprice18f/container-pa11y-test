@@ -1,10 +1,10 @@
-name: Builds from a prebuilt pa11y container to create a AMD64 and ARM64 image
+name: Builds MongoDB 4.4 pa11y container to create a AMD64 and ARM64 image
 
 on:
   push:
-    branches: [ container-prebuilt ]
+    branches: [ container-pa11y-mongodb1 ]
   pull_request:
-    branches: [ container-prebuilt ]
+    branches: [ container-pa11y-mongodb1 ]
 
 jobs:
   build:
