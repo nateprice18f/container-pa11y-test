@@ -1,10 +1,10 @@
-name: Pa11y Dashboard Container 
+name: Pa11y Dashboard Container with CLI
 
 on:
   push:
-    branches: [ container-pa11y-dashboard ]
+    branches: [ cotainer-pa11y-dashboard ]
   pull_request:
-    branches: [ container-pa11y-dashboard ]
+    branches: [ cotainer-pa11y-dashboard ]
 
 jobs:
   build:
