@@ -2,9 +2,9 @@ name: Builds MongoDB 4.4 pa11y container to create a AMD64 and ARM64 image
 
 on:
   push:
-    branches: [ container-pa11y-mongodb1 ]
+    branches: [ container-pa11y-mongodb ]
   pull_request:
-    branches: [ container-pa11y-mongodb1 ]
+    branches: [ container-pa11y-mongodb ]
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
             type=ref,event=branch
             type=semver,pattern={{major}}.{{minor}}
           flavor: |
-            latest=false
+            latest=true
 
       - name: Lint Dockerfile
         uses: hadolint/hadolint-action@v3.1.0
