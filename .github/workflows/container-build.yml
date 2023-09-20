@@ -1,10 +1,10 @@
-name: Builds Nodejs Container with Mongodb  
+name: Builds Nodejs Container without Mongodb  
 
 on:
   push:
-    branches: [ container-build ]
+    branches: [ container-build-without-mongoDB ]
   pull_request:
-    branches: [ container-build ]
+    branches: [ container-build-without-mongoDB ]
 
 jobs:
   build:
@@ -54,5 +54,5 @@ jobs:
       - name: Security scan
         uses: anchore/scan-action@v3
         with:
-          image-reference: "natep18f/container-pa11y-test:container-build"
+          image-reference: "natep18f/container-pa11y-test:container-build-without-mongoDB"
           fail-build: true
