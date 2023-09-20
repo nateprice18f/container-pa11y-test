@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 ENV TZ=America/New_York
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-SHELL ["/bin/sh", "-c"]
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y gnupg wget 
