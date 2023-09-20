@@ -2,6 +2,9 @@ FROM natep18f/container-pa11y-test:container-build
 
 ENV NODE_ENV=production
 
+WORKDIR /pa11y
+RUN npm install pa11y --unsafe-perm=true --allow-root
+
 RUN git clone https://github.com/pa11y/pa11y-dashboard.git /pa11y-dashboard
 WORKDIR /pa11y-dashboard
 RUN npm install --unsafe-perm=true --allow-root
@@ -44,5 +47,4 @@ USER pptruser
 
 EXPOSE 4000
 EXPOSE 3000
-#CMD ["mongod"]
 CMD ["node", "index.js"]
