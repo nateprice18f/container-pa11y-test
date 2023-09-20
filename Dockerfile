@@ -5,15 +5,14 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN apt-get update && \
-    apt-get install --no-install-recommends -y gnupg wget curl
+RUN apt-get update && apt-get install --no-install-recommends -y ca-certificates gnupg wget curl
 
     
 #RUN wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add - 
 #RUN echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list
 
 RUN curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc |  apt-key add -
-RUN echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+RUN echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list
 
 
 WORKDIR /data/db
