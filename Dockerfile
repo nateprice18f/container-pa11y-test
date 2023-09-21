@@ -3,10 +3,10 @@ FROM natep18f/container-pa11y-test:container-build
 ENV NODE_ENV=production
 
 WORKDIR /pa11y
-RUN npm install pa11y --unsafe-perm=true --allow-root
+RUN npm install -g pa11y --unsafe-perm=true --allow-root
 
-RUN git clone https://github.com/pa11y/pa11y-dashboard.git /pa11y-dashboard
 WORKDIR /pa11y-dashboard
+RUN git clone https://github.com/pa11y/pa11y-dashboard.git /pa11y-dashboard
 RUN npm install --unsafe-perm=true --allow-root
 
 # If running Docker >= 1.13.0 use docker run's --init arg to reap zombie processes, otherwise
