@@ -1,0 +1,11 @@
+version: "3"
+services:
+  pa11y-dashboard:
+    image: natep18f/container-pa11y-test:container-pa11y-dashboard
+    volumes: 
+      - <path/to/pa11y-dashboard/config>:/pa11y-dashboard/config:ro
+    ports:
+      - "3000:3000"
+      - "4000:4000"
+
+  
