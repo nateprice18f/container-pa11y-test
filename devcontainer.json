@@ -1,0 +1,13 @@
+{
+  "name": "Pa11y-Dashboard Container",
+  "image": "<Container name>",
+  "mounts":[
+    {
+      "source": "${localWorkspaceFolder}", 
+      "target": "/workspace",
+      "type": "bind",
+      "consistency": "consistent",
+      "readonly": true
+    }
+  ]
+}
