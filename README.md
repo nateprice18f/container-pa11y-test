@@ -1,7 +1,7 @@
 # Pa11y Dashboard Test Repo
 
 > **Warning**
-> The work done within this repo is proof of concept and should be used as a starting point for future work.
+> The work done within this repo are proof of concept and should be used as a starting point for future work.
 
 [![Builds Nodejs Container with Mongodb](https://github.com/nateprice18f/container-pa11y-test/actions/workflows/container-build.yml/badge.svg)](https://github.com/nateprice18f/container-pa11y-test/actions/workflows/container-build.yml) 
 [![Pa11y Dashboard Container](https://github.com/nateprice18f/container-pa11y-test/actions/workflows/cotainer-pa11y-dashboard.yml/badge.svg?branch=container-pa11y-dashboard)](https://github.com/nateprice18f/container-pa11y-test/actions/workflows/cotainer-pa11y-dashboard.yml)
