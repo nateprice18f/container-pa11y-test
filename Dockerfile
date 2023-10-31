@@ -19,8 +19,8 @@ WORKDIR /data/db
 
 RUN apt-get update && \
     #apt install -y mongodb-org
-    apt-get install --no-install-recommends -y mongodb-org mongodb-org-server mongodb-org-shell mongodb-org-mongos mongodb-org-tools
-    #apt-get install --no-install-recommends -y mongodb-org=4.4.1 mongodb-org-server=4.4.1 mongodb-org-shell=4.4.1 mongodb-org-mongos=4.4.1 mongodb-org-tools=4.4.1
+    #apt-get install --no-install-recommends -y mongodb-org mongodb-org-server mongodb-org-shell mongodb-org-mongos mongodb-org-tools
+    apt-get install --no-install-recommends -y mongodb-org=4.4.1 mongodb-org-server=4.4.1 mongodb-org-shell=4.4.1 mongodb-org-mongos=4.4.1 mongodb-org-tools=4.4.1
 
 EXPOSE 27017
 
