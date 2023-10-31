@@ -1,0 +1,24 @@
+version: '3'
+services:
+  pa11y-test-container:
+     image: natep18f/container-pa11y-test:container-pa11y-dashboard
+     ports: 
+       - 3000:3000
+       - 4000:4000
+     volumes:
+       - type: bind
+         source: "~/<Path/To/Folder>/config"
+         target: "/pa11y-dashboard/config"
+         read_only: true
+     depends_on:
+        - mongodb-db
+     links:
+        - mongodb-db
+  mongodb-db:
+     image: mongo:4.4-rc
+     ports: 
+       - 27017:27017
+     volumes:
+       - type: bind
+         source: "~/<Path/To/Folder>/db"
+         target: "/data/db"
