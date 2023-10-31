@@ -5,5 +5,5 @@ services:
      volumes:
        - type: bind
          source: /path/to/local/storage or ENV Example: ${PWD}
-         target: /path/to/container/storage
+         target: /e2e
          read_only: true
