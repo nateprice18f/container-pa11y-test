@@ -1,9 +1,9 @@
 version: '3'
 services:
-  cypress-test-container:
+  pa11y-test-container:
      image: <container image>
      volumes:
        - type: bind
          source: /path/to/local/storage or ENV Example: ${PWD}
-         target: /e2e
+         target: /pa11y-dashboard/config
          read_only: true
